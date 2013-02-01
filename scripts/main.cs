@@ -1,3 +1,8 @@
 define((require) ->
-    console.log("hello world!")
+
+  writeToMinibuffer = (message) ->
+    minibuffer = document.getElementById "minibuffer"
+    minibuffer.textContent = message
+    
+  writeToMinibuffer "hello world!"
 )
