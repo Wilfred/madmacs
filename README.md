@@ -2,6 +2,9 @@
 
 Nothing to see yet, move along.
 
+An irreverent implementation of a lisp interpreter. We'll party like
+it's 1976.
+
 ## Development
 
 MacMacs uses CoffeeScript:
