@@ -1,4 +1,5 @@
 define((require) ->
+  lexer = require "lexer"
 
   writeToMinibuffer = (message) ->
     minibuffer = document.getElementById "minibuffer"
@@ -10,6 +11,6 @@ define((require) ->
 
   evalButton = document.getElementById "eval"
   evalButton.addEventListener('click', () ->
-    writeToMinibuffer getFrameContent()
+    writeToMinibuffer(lexer.lex(getFrameContent()))
   false)
 )
