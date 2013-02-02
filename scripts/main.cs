@@ -4,8 +4,12 @@ define((require) ->
     minibuffer = document.getElementById "minibuffer"
     minibuffer.textContent = message
 
+  getFrameContent = () ->
+    frame = document.getElementById "frame"
+    frame.value
+
   evalButton = document.getElementById "eval"
   evalButton.addEventListener('click', () ->
-    writeToMinibuffer "hello again world"
+    writeToMinibuffer getFrameContent()
   false)
 )
